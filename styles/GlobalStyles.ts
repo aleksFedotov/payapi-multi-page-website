@@ -59,21 +59,22 @@ body {
   font-size: var(--font-size-body);
   background-color:var(--color-water-white);
   font-family: 'DM Serif Display', sans-serif;
-  min-height: 100vh;
-  
+  min-height: 100vh; 
  
 }
 
-
-#main_container {
-  max-width: 144rem;
-  width: 100%;
-  margin: 0 auto;
- 
+a {
+  text-decoration:none;
 }
 
+h2 {
+  font-size: var(--font-size-heading-l);
+}
 
-
-
+p {
+  font-family: "Public Sans", sans-serif;
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+}
 
 `;

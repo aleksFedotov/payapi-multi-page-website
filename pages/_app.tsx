@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <GlobalStyles />
-      <div id="main_container"></div>
+
       <Component {...pageProps} />
     </>
   );
