@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+interface NavProps {
+  color: string;
+}
+
 export const HeaderWrapper = styled.header`
   max-width: 110rem;
   width: 100%;
@@ -7,6 +11,7 @@ export const HeaderWrapper = styled.header`
   display: flex;
   align-items: center;
   margin-top: 4rem;
+  padding: 0 2.4rem;
 
   button {
     margin-left: auto;
@@ -26,12 +31,20 @@ export const NavigationList = styled.ul`
   justify-content: space-between;
 `;
 
-export const NavigationListItem = styled.li`
+export const NavigationListItem = styled.li<NavProps>`
   font-size: var(--font-size-body);
 
   a {
-    color: var(--color-san-luan-blue);
+    color: ${({ color }) =>
+      color === 'dark'
+        ? 'var(--color-san-luan-blue)'
+        : 'var(--color-water-white)'};
+    opacity: 0.7;
     text-decoration: none;
     font-size: inherit;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 `;

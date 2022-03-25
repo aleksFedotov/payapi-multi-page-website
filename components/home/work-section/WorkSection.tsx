@@ -1,11 +1,8 @@
 import React from 'react';
 
-import {
-  Section,
-  ContentWrapper,
-  ContentTextWrapper,
-  ComapaniesGrid,
-} from './WorkSectionStyles';
+import { Section, ContentWrapper, ComapaniesGrid } from './WorkSectionStyles';
+
+import { TextWrapper } from '../../shared/text-wrapper/TextWrapperStyles';
 
 import { Button } from '../../shared/buttons/ButtonsStyles';
 
@@ -20,7 +17,7 @@ const WorkSection: React.FC = () => {
   return (
     <Section>
       <ContentWrapper>
-        <ContentTextWrapper>
+        <TextWrapper color="white">
           <h2>Who we work with</h2>
           <p>
             Today, millions of people around the world have successfully
@@ -29,7 +26,7 @@ const WorkSection: React.FC = () => {
             experiences for their users.{' '}
           </p>
           <Button className="secondary-ligth">About Us</Button>
-        </ContentTextWrapper>
+        </TextWrapper>
         <ComapaniesGrid>
           <Tesla />
           <Microcoft />

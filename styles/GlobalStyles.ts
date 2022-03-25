@@ -4,7 +4,7 @@ const customMediaQuery = (maxWidth: number) =>
   `@media (max-width: ${maxWidth}px)`;
 
 export const media = {
-  tablet: customMediaQuery(800),
+  tablet: customMediaQuery(950),
   phone: customMediaQuery(525),
 };
 
@@ -70,6 +70,8 @@ a {
 h2 {
   font-size: var(--font-size-heading-l);
 }
+
+
 
 p {
   font-family: "Public Sans", sans-serif;

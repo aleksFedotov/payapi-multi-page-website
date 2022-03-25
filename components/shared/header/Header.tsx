@@ -20,13 +20,13 @@ const Header = () => {
       </Link>
       <Navigation>
         <NavigationList>
-          <NavigationListItem>
+          <NavigationListItem color="dark">
             <Link href={'/pricing'}>Pricing</Link>
           </NavigationListItem>
-          <NavigationListItem>
+          <NavigationListItem color="dark">
             <Link href={'/about'}>About</Link>
           </NavigationListItem>
-          <NavigationListItem>
+          <NavigationListItem color="dark">
             <Link href={'/contact'}>Contact</Link>
           </NavigationListItem>
         </NavigationList>

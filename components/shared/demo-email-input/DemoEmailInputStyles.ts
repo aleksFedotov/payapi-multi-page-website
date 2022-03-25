@@ -4,6 +4,7 @@ export const DemoEmailWrapper = styled.div`
   position: relative;
   max-width: 44.5rem;
   width: 100%;
+  height: fit-content;
   display: flex;
   justify-content: space-between;
   align-items: center;

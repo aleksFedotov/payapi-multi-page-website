@@ -7,6 +7,7 @@ export const HeroWrapper = styled.div`
   width: 100%;
   align-items: center;
   margin-top: 2rem;
+  padding: 0 2.4rem;
 `;
 
 export const HeroTextWrapper = styled.div`

@@ -1,14 +1,21 @@
 import styled from 'styled-components';
 
 export const Section = styled.section`
+  position: relative;
   width: 100%;
   background-color: var(--color-mirage-blue);
-  background-image: url('/assets/shared/desktop/bg-pattern-circle.svg');
-  background-repeat: no-repeat;
-  background-position: -23.5rem -35.9rem;
   display: flex;
   justify-content: center;
-  padding: 10rem 0;
+  padding: 10rem 2.4rem;
+  overflow: hidden;
+
+  &::after {
+    content: url('/assets/shared/desktop/bg-pattern-circle.svg');
+    position: absolute;
+    top: -35.9rem;
+    left: -16vw;
+    z-index: 1;
+  }
 `;
 
 export const ContentWrapper = styled.div`
@@ -50,5 +57,9 @@ export const ComapaniesGrid = styled.div`
     path {
       fill: var(--color-water-white);
     }
+  }
+
+  @media (max-width: 1100px) {
+    grid-template-columns: repeat(2, 1fr);
   }
 `;
