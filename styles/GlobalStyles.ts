@@ -5,7 +5,7 @@ const customMediaQuery = (maxWidth: number) =>
 
 export const media = {
   tablet: customMediaQuery(950),
-  phone: customMediaQuery(525),
+  phone: customMediaQuery(650),
 };
 
 export const GlobalStyles = createGlobalStyle`

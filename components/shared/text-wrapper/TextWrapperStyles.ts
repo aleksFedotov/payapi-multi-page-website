@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { media } from '../../../styles/GlobalStyles';
+
 interface TextWrapperProps {
   color: string;
 }
@@ -21,5 +23,21 @@ export const TextWrapper = styled.div<TextWrapperProps>`
 
   p {
     opacity: 0.7;
+  }
+
+  ${media.tablet} {
+    h2 {
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+
+  ${media.phone} {
+    h2 {
+      font-size: var(--font-size-heading-m);
+    }
   }
 `;

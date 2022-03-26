@@ -7,7 +7,7 @@ interface ButtonProps {
 export const Button = styled.button`
   font-family: 'Public Sans', sans-serif;
   color: var(--color-water-white);
-  padding: 1.6rem 0;
+  height: 4.8rem;
   font-size: var(--font-size-body);
   border-radius: 2.4rem;
   cursor: pointer;
@@ -22,8 +22,8 @@ export const Button = styled.button`
     border: none;
     background-color: var(--color-dark-pink);
     color: var(--color-water-white);
-    max-width: 17.3rem;
-    width: 100%;
+    /* width: 17.3rem; */
+
     &:hover {
       background-color: var(--color-charm-pink);
     }

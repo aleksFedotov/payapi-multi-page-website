@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { media } from '../../../styles/GlobalStyles';
+
 export const ReadyToStartWrapper = styled.div`
   max-width: 110rem;
   width: 100%;
@@ -12,5 +14,10 @@ export const ReadyToStartWrapper = styled.div`
 
   h2 {
     color: var(--color-san-luan-blue);
+  }
+
+  ${media.tablet} {
+    flex-direction: column;
+    gap: 4rem;
   }
 `;

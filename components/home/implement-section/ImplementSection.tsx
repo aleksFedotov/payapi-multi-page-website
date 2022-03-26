@@ -2,17 +2,19 @@ import React from 'react';
 
 import { SectionImplement } from './ImplementSectionStyles';
 import { TextWrapper } from '../../shared/text-wrapper/TextWrapperStyles';
+import ImplementImage from '../../../public/assets/home/desktop/illustration-easy-to-implement.svg';
 import Image from 'next/image';
 
 const ImplementSection = () => {
   return (
     <SectionImplement>
-      <Image
+      {/* <Image
         src={'/assets/home/desktop/illustration-easy-to-implement.svg'}
         alt="Implement"
-        width={605}
-        height={444}
-      />
+        width={445}
+        height={284}
+      /> */}
+      <ImplementImage />
 
       <TextWrapper color="dark">
         <h2>Easy to implement</h2>

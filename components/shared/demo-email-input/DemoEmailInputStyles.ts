@@ -1,10 +1,35 @@
 import styled from 'styled-components';
+import { media } from '../../../styles/GlobalStyles';
 
 export const DemoEmailWrapper = styled.div`
   position: relative;
   max-width: 44.5rem;
   width: 100%;
-  height: fit-content;
+
+  cursor: pointer;
+
+  button {
+    width: 17.3rem;
+    position: absolute;
+    right: 0;
+
+    top: 0;
+  }
+
+  ${media.phone} {
+    height: 11.2rem;
+    max-width: 100%;
+    button {
+      width: 100%;
+      left: 0;
+      right: 0;
+      top: 6.4rem;
+    }
+  }
+`;
+
+export const InputWrapper = styled.div`
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,8 +37,8 @@ export const DemoEmailWrapper = styled.div`
   box-shadow: 1rem 1rem 2.5rem -1rem rgba(54, 83, 107, 0.25);
   border-radius: 2.4rem;
   padding-left: 2.8rem;
-  cursor: pointer;
   font-family: 'Public Sans', sans-serif;
+  height: 4.8rem;
 
   input {
     font-family: inherit;
@@ -28,6 +53,21 @@ export const DemoEmailWrapper = styled.div`
     &::placeholder {
       font-family: inherit;
       opacity: 0.5;
+    }
+  }
+
+  ${media.tablet} {
+    p {
+      bottom: 5rem;
+    }
+  }
+
+  ${media.phone} {
+    p {
+      left: auto;
+      right: 2.8rem;
+      bottom: 50%;
+      transform: translateY(50%);
     }
   }
 `;

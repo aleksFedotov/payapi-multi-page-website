@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { media } from '../../../styles/GlobalStyles';
+
 export const Section = styled.section`
   position: relative;
   width: 100%;
@@ -13,8 +15,21 @@ export const Section = styled.section`
     content: url('/assets/shared/desktop/bg-pattern-circle.svg');
     position: absolute;
     top: -35.9rem;
-    left: -16vw;
+    left: -23.5rem;
     z-index: 1;
+
+    ${media.tablet} {
+      left: 50%;
+      top: -54.8rem;
+      transform: translate(-50%);
+    }
+  }
+  ${media.tablet} {
+    padding: 8.6rem 2.4rem;
+
+    button {
+      margin: 0 auto;
+    }
   }
 `;
 
@@ -24,22 +39,10 @@ export const ContentWrapper = styled.div`
   width: 100%;
   align-items: center;
   justify-content: space-between;
-`;
 
-export const ContentTextWrapper = styled.div`
-  max-width: 44.5rem;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 2.4rem;
-
-  h2 {
-    color: var(--color-water-white);
-  }
-
-  p {
-    color: var(--color-water-white);
-    opacity: 0.7;
+  ${media.tablet} {
+    flex-direction: column-reverse;
+    gap: 6rem;
   }
 `;
 
@@ -61,5 +64,18 @@ export const ComapaniesGrid = styled.div`
 
   @media (max-width: 1100px) {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  ${media.tablet} {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  ${media.phone} {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4rem;
+
+    svg {
+      transform: scale(0.82);
+    }
   }
 `;

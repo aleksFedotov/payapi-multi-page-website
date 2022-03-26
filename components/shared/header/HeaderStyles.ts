@@ -15,6 +15,7 @@ export const HeaderWrapper = styled.header`
 
   button {
     margin-left: auto;
+    width: 17.3rem;
   }
 `;
 

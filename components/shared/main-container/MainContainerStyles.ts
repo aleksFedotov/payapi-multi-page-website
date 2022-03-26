@@ -18,11 +18,24 @@ export const MainContainer = styled.main`
 
   &.home {
     &::before {
-      content: url('/assets/shared/desktop/bg-pattern-circle.svg');
+      content: '';
+      background-image: url('/assets/shared/desktop/bg-pattern-circle.svg');
       position: absolute;
       z-index: -1;
+      width: 78rem;
+      height: 78rem;
+      background-repeat: no-repeat;
+      background-size: cover;
       top: -17.2rem;
-      right: -9.5vw;
+      right: -14rem;
+
+      ${media.tablet} {
+        right: 50%;
+        top: -66.3rem;
+        width: 94.9rem;
+        height: 94.9rem;
+        transform: translateX(50%);
+      }
     }
   }
 `;

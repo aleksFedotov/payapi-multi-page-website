@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 
 import { Button } from '../buttons/ButtonsStyles';
-import { DemoEmailWrapper } from './DemoEmailInputStyles';
+import { DemoEmailWrapper, InputWrapper } from './DemoEmailInputStyles';
 import { ErrorMessage } from '../erroe-message/ErrorMessageStyles';
 
 const DemoEmailInput: React.FC = () => {
@@ -27,26 +27,25 @@ const DemoEmailInput: React.FC = () => {
         inputRef.current?.focus();
       }}
     >
-      <input
-        type="text"
-        placeholder="Enter email address"
-        ref={inputRef}
-        onChange={() => {
-          setIsError(false);
-        }}
-      />
-      <Button
-        className="primary"
-        onClick={emailSudmitHanlder}
-        disabled={isError}
-      >
+      <InputWrapper>
+        <input
+          type="text"
+          placeholder="Enter email address"
+          ref={inputRef}
+          onChange={() => {
+            setIsError(false);
+          }}
+        />
+        {isError && (
+          <ErrorMessage bottom="5.5rem" left="2.8rem">
+            Please enter valid email
+          </ErrorMessage>
+        )}
+      </InputWrapper>
+
+      <Button className="primary" onClick={emailSudmitHanlder}>
         Schedule a Demo
       </Button>
-      {isError && (
-        <ErrorMessage bottom="5.5rem" left="2.8rem">
-          Please enter valid email
-        </ErrorMessage>
-      )}
     </DemoEmailWrapper>
   );
 };

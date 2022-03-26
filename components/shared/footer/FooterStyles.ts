@@ -10,10 +10,16 @@ export const FooterWrapper = styled.footer`
   align-items: center;
   margin-top: 4rem;
   background-color: var(--color-mirage-blue);
-  background-image: url('/assets/shared/desktop/bg-pattern-circle.svg');
-  background-repeat: no-repeat;
-  background-position: 100.5rem -13.6rem;
+  overflow: hidden;
   padding: 0 2.4rem;
+
+  &::before {
+    content: url('/assets/shared/desktop/bg-pattern-circle.svg');
+    position: absolute;
+    z-index: 1;
+    top: -13.6rem;
+    right: -39rem;
+  }
 
   svg {
     path {
