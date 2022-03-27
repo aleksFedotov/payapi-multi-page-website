@@ -1,11 +1,21 @@
 import styled from 'styled-components';
 
+import { media } from '../../../styles/GlobalStyles';
+
 export const SectionFeatures = styled.section`
   max-width: 110rem;
   width: 100%;
   display: flex;
-  padding: 2.4rem;
   gap: 3rem;
+
+  ${media.tablet} {
+    gap: 1.5rem;
+  }
+
+  ${media.phone} {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const Feature = styled.div`

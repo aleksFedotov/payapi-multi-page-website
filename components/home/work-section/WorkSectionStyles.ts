@@ -4,7 +4,7 @@ import { media } from '../../../styles/GlobalStyles';
 
 export const Section = styled.section`
   position: relative;
-  width: 100%;
+  width: calc(100% + 4.8rem);
   background-color: var(--color-mirage-blue);
   display: flex;
   justify-content: center;
@@ -25,7 +25,7 @@ export const Section = styled.section`
     }
   }
   ${media.tablet} {
-    padding: 8.6rem 2.4rem;
+    padding: 8.6rem 0;
 
     button {
       margin: 0 auto;
@@ -62,7 +62,7 @@ export const ComapaniesGrid = styled.div`
     }
   }
 
-  @media (max-width: 1100px) {
+  @media (max-width: 1150px) {
     grid-template-columns: repeat(2, 1fr);
   }
 

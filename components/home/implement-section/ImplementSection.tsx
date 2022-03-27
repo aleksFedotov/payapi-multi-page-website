@@ -8,13 +8,11 @@ import Image from 'next/image';
 const ImplementSection = () => {
   return (
     <SectionImplement>
-      {/* <Image
+      <img
         src={'/assets/home/desktop/illustration-easy-to-implement.svg'}
         alt="Implement"
-        width={445}
-        height={284}
-      /> */}
-      <ImplementImage />
+      />
+      {/* <ImplementImage /> */}
 
       <TextWrapper color="dark">
         <h2>Easy to implement</h2>

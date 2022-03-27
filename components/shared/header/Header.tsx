@@ -9,8 +9,14 @@ import {
 } from './HeaderStyles';
 import { Button } from '../buttons/ButtonsStyles';
 import Logo from '../../../public/assets/shared/desktop/logo.svg';
+import Menu from '../../../public/assets/shared/mobile/menu.svg';
 
-const Header = () => {
+const Header: React.FC<{ toggleMenu: () => void }> = ({ toggleMenu }) => {
+  const onepMenuHandler = () => {
+    toggleMenu();
+    document.body.style.overflow = 'hidden';
+  };
+
   return (
     <HeaderWrapper>
       <Link href={'/'}>
@@ -18,7 +24,7 @@ const Header = () => {
           <Logo />
         </a>
       </Link>
-      <Navigation>
+      <Navigation type="header">
         <NavigationList>
           <NavigationListItem color="dark">
             <Link href={'/pricing'}>Pricing</Link>
@@ -32,6 +38,9 @@ const Header = () => {
         </NavigationList>
       </Navigation>
       <Button className="primary">Schedule a Demo</Button>
+      <Button className="menu" onClick={onepMenuHandler}>
+        <Menu />
+      </Button>
     </HeaderWrapper>
   );
 };

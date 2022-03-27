@@ -10,7 +10,6 @@ export const HeroWrapper = styled.div`
   align-items: center;
   margin-top: 7.4rem;
   margin-bottom: 7.4rem;
-  padding: 0 2.4rem;
   height: fit-content;
 
   svg {

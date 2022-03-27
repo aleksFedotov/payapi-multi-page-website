@@ -9,8 +9,7 @@ export const ReadyToStartWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 24rem;
-  padding: 0 2.4rem;
+  margin-bottom: 20rem;
 
   h2 {
     color: var(--color-san-luan-blue);
@@ -19,5 +18,13 @@ export const ReadyToStartWrapper = styled.div`
   ${media.tablet} {
     flex-direction: column;
     gap: 4rem;
+  }
+
+  ${media.phone} {
+    margin-top: 8rem;
+    margin-bottom: 44rem;
+    h2 {
+      font-size: var(--font-size-heading-m);
+    }
   }
 `;

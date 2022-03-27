@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { media } from '../../../styles/GlobalStyles';
+
 export const FooterWrapper = styled.footer`
   position: absolute;
   bottom: 0;
@@ -8,7 +10,6 @@ export const FooterWrapper = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 4rem;
   background-color: var(--color-mirage-blue);
   overflow: hidden;
   padding: 0 2.4rem;
@@ -26,6 +27,11 @@ export const FooterWrapper = styled.footer`
       fill: var(--color-water-white);
     }
   }
+
+  ${media.phone} {
+    height: fit-content;
+    padding: 4rem 0;
+  }
 `;
 
 export const FooterContent = styled.div`
@@ -33,6 +39,12 @@ export const FooterContent = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
+
+  ${media.phone} {
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
 `;
 
 export const Socials = styled.div`
@@ -52,5 +64,9 @@ export const Socials = styled.div`
         }
       }
     }
+  }
+
+  ${media.phone} {
+    margin-left: 0;
   }
 `;

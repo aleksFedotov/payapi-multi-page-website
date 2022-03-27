@@ -15,8 +15,10 @@ export const MainContainer = styled.main`
   align-items: center;
   z-index: 1;
   overflow: hidden;
+  padding: 0 2.4rem;
 
   &.home {
+    /* max-height: 322.8rem; */
     &::before {
       content: '';
       background-image: url('/assets/shared/desktop/bg-pattern-circle.svg');

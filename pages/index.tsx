@@ -11,7 +11,7 @@ import FeatureSection from '../components/home/features-section/FeatureSection';
 import ReadyToStart from '../components/shared/ready-to-start/ReadyToStart';
 import Footer from '../components/shared/footer/Footer';
 
-const Home: NextPage = () => {
+const Home: NextPage<{ toggleMenu: () => void }> = ({ toggleMenu }) => {
   return (
     <>
       <Head>
@@ -20,7 +20,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="favicon-32x32.png" />
       </Head>
       <MainContainer className="home">
-        <Header />
+        <Header toggleMenu={toggleMenu} />
         <HeroHome />
         <WorkSection />
         <ImplementSection />

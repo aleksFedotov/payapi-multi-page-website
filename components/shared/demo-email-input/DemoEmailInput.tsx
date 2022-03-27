@@ -38,7 +38,7 @@ const DemoEmailInput: React.FC = () => {
         />
         {isError && (
           <ErrorMessage bottom="5.5rem" left="2.8rem">
-            Please enter valid email
+            Invalid email
           </ErrorMessage>
         )}
       </InputWrapper>

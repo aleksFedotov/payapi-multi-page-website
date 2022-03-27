@@ -1,8 +1,4 @@
-import styled, { css } from 'styled-components';
-
-interface ButtonProps {
-  buttonType: string;
-}
+import styled from 'styled-components';
 
 export const Button = styled.button`
   font-family: 'Public Sans', sans-serif;
@@ -22,7 +18,6 @@ export const Button = styled.button`
     border: none;
     background-color: var(--color-dark-pink);
     color: var(--color-water-white);
-    /* width: 17.3rem; */
 
     &:hover {
       background-color: var(--color-charm-pink);
@@ -70,5 +65,15 @@ export const Button = styled.button`
       color: rgba(54, 83, 107, 0.5);
       pointer-events: none;
     }
+  }
+
+  &.menu {
+    position: relative;
+    border: none;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 0;
+    background-color: transparent;
+    z-index: 5;
   }
 `;

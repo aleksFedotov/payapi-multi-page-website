@@ -3,17 +3,18 @@ import styled from 'styled-components';
 import { media } from '../../../styles/GlobalStyles';
 
 export const SectionImplement = styled.section`
-  max-width: 101.5rem;
+  max-width: 110rem;
   width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin-top: 10rem;
-  padding: 0 2.4rem;
 
-  svg {
-    width: 60.5rem;
-    height: 44.4rem;
+  img {
+    margin-left: -7.4rem;
+  }
+
+  div {
+    margin-top: -4rem;
   }
 
   ${media.tablet} {
@@ -21,22 +22,27 @@ export const SectionImplement = styled.section`
     margin-bottom: 10rem;
     gap: 4.8rem;
 
-    svg {
-      width: 41rem;
-      height: 25rem;
-      padding: 0 2.4rem;
+    img {
+      transform: scale(0.92);
+      margin-left: 5rem;
     }
     div {
+      margin-top: -10rem;
       max-width: 57.3rem;
       width: 100%;
     }
   }
 
   ${media.phone} {
-    margin-top: 8rem;
-    svg {
-      width: 32.8rem;
-      height: 20.9rem;
+    margin-top: 0rem;
+    margin-bottom: 8rem;
+    img {
+      transform: scale(0.73);
+      margin-left: 4rem;
+    }
+
+    div {
+      margin-top: -13rem;
     }
   }
 `;

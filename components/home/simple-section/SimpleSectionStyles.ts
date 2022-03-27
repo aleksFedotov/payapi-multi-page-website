@@ -7,13 +7,6 @@ export const SectionSimple = styled.div`
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2.4rem;
-
-  svg {
-    width: 56.5rem;
-    height: 49.7rem;
-    z-index: 1;
-  }
 
   &::before {
     content: url('/assets/shared/desktop/bg-pattern-circle.svg');
@@ -27,28 +20,38 @@ export const SectionSimple = styled.div`
     }
   }
 
+  img {
+    margin-right: -13rem;
+    position: relative;
+
+    @media (max-width: 1150px) {
+      margin-right: -10rem;
+    }
+
+    ${media.tablet} {
+      transform: scale(0.64);
+      margin-right: -4rem;
+    }
+
+    ${media.phone} {
+      transform: scale(0.58);
+    }
+  }
+
   ${media.tablet} {
     flex-direction: column-reverse;
+    margin-bottom: 10rem;
+    margin-top: -14rem;
 
-    span {
-      width: 49.5rem !important;
-      height: 42.3rem !important;
-      margin-left: 6rem !important;
-    }
     div {
       max-width: 57.3rem;
       width: 100%;
+      margin-top: -13rem;
     }
-
-    margin-bottom: 10rem;
   }
-`;
 
-export const ImageWrapper = styled.div`
-  margin-right: -13rem;
-  position: relative;
-
-  @media (max-width: 1100px) {
-    margin-right: 0rem;
+  ${media.phone} {
+    margin-top: -18rem;
+    margin-bottom: 8rem;
   }
 `;

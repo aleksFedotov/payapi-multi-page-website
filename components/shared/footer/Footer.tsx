@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
             <Logo />
           </a>
         </Link>
-        <Navigation>
+        <Navigation type="footer">
           <NavigationList>
             <NavigationListItem color="ligth">
               <Link href={'/pricing'}>Pricing</Link>

@@ -1,10 +1,7 @@
 import React from 'react';
 
-import Image from 'next/image';
-
-import { SectionSimple, ImageWrapper } from './SimpleSectionStyles';
+import { SectionSimple } from './SimpleSectionStyles';
 import { TextWrapper } from '../../shared/text-wrapper/TextWrapperStyles';
-import SimpleUiImage from '../../../public/assets/home/desktop/illustration-simple-ui.svg';
 
 const SimpleSection = () => {
   return (
@@ -16,15 +13,11 @@ const SimpleSection = () => {
           checkout flow and designed to optimize conversion.
         </p>
       </TextWrapper>
-      <ImageWrapper>
-        {/* <Image
-          src={'/assets/home/desktop/illustration-simple-ui.svg'}
-          alt="Simple UI & UX"
-          width={772}
-          height={660}
-        /> */}
-        <SimpleUiImage />
-      </ImageWrapper>
+
+      <img
+        src={'/assets/home/desktop/illustration-simple-ui.svg'}
+        alt="Simple UI & UX"
+      />
     </SectionSimple>
   );
 };
