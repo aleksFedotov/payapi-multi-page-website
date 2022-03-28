@@ -50,10 +50,10 @@ export const Button = styled.button`
 
   &.secondary-dark {
     border: 1px solid var(--color-san-luan-blue);
-    background-color: var(--color-water-white);
+    background-color: transparent;
     color: var(--color-san-luan-blue);
-    max-width: 12.9rem;
-    width: 100%;
+    font-weight: 700;
+    padding: 0 2.2rem;
 
     &:hover {
       background-color: var(--color-san-luan-blue);
@@ -74,6 +74,5 @@ export const Button = styled.button`
     width: 3rem;
     border-radius: 0;
     background-color: transparent;
-    z-index: 5;
   }
 `;

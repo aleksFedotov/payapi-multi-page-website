@@ -13,9 +13,11 @@ export const HeroWrapper = styled.div`
   height: fit-content;
 
   svg {
+    position: relative;
     width: 26.3rem;
     height: 50rem;
     margin-right: 9.6rem;
+    z-index: 2;
   }
 
   ${media.tablet} {

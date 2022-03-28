@@ -11,19 +11,14 @@ import {
 import { MobileMenuWrapper } from './MobileMenuStyles';
 
 import { Button } from '../buttons/ButtonsStyles';
-import Close from '../../../public/assets/shared/mobile/close.svg';
 
 const MobileMenu: React.FC<{ toggleMenu: () => void }> = ({ toggleMenu }) => {
-  const closeMenuHandler = () => {
+  const linkHanlder = () => {
     toggleMenu();
     document.body.style.overflow = 'visible';
   };
-
   return (
     <MobileMenuWrapper>
-      <Button className="menu" onClick={closeMenuHandler}>
-        <Close />
-      </Button>
       <Navigation>
         <NavigationList>
           <NavigationListItem color="ligth">

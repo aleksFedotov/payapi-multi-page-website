@@ -16,8 +16,10 @@ export const HeaderWrapper = styled.header<NavProps>`
   margin-top: 4rem;
 
   button {
+    position: relative;
     margin-left: auto;
     width: 17.3rem;
+    z-index: 3;
 
     &.primary {
       display: block;

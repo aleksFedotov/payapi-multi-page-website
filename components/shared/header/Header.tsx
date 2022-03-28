@@ -9,17 +9,25 @@ import {
 } from './HeaderStyles';
 import { Button } from '../buttons/ButtonsStyles';
 import Logo from '../../../public/assets/shared/desktop/logo.svg';
-import Menu from '../../../public/assets/shared/mobile/menu.svg';
+import MenuIcon from '../../../public/assets/shared/mobile/menu.svg';
+import CloseIcon from '../../../public/assets/shared/mobile/close.svg';
 
-const Header: React.FC<{ toggleMenu: () => void }> = ({ toggleMenu }) => {
-  const onepMenuHandler = () => {
+const Header: React.FC<{ toggleMenu: () => void; isOpened: boolean }> = ({
+  toggleMenu,
+  isOpened,
+}) => {
+  const toggleMenuHandler = () => {
     toggleMenu();
-    document.body.style.overflow = 'hidden';
+    if (isOpened) {
+      document.body.style.overflow = 'visible';
+    } else {
+      document.body.style.overflow = 'hidden';
+    }
   };
 
   return (
     <HeaderWrapper>
-      <Link href={'/'}>
+      <Link href={'/home'}>
         <a>
           <Logo />
         </a>
@@ -38,8 +46,8 @@ const Header: React.FC<{ toggleMenu: () => void }> = ({ toggleMenu }) => {
         </NavigationList>
       </Navigation>
       <Button className="primary">Schedule a Demo</Button>
-      <Button className="menu" onClick={onepMenuHandler}>
-        <Menu />
+      <Button className="menu" onClick={toggleMenuHandler}>
+        {isOpened ? <CloseIcon /> : <MenuIcon />}
       </Button>
     </HeaderWrapper>
   );

@@ -13,17 +13,15 @@ export const MainContainer = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 1;
   overflow: hidden;
   padding: 0 2.4rem;
 
   &.home {
-    /* max-height: 322.8rem; */
     &::before {
       content: '';
       background-image: url('/assets/shared/desktop/bg-pattern-circle.svg');
       position: absolute;
-      z-index: -1;
+      z-index: 2;
       width: 78rem;
       height: 78rem;
       background-repeat: no-repeat;
@@ -37,6 +35,31 @@ export const MainContainer = styled.main`
         width: 94.9rem;
         height: 94.9rem;
         transform: translateX(50%);
+      }
+    }
+  }
+
+  &.pricing {
+    &::before {
+      content: '';
+      background-image: url('/assets/shared/desktop/bg-pattern-circle.svg');
+      position: absolute;
+      z-index: 0;
+      width: 78rem;
+      height: 78rem;
+      background-repeat: no-repeat;
+      background-size: cover;
+      top: -52.7rem;
+      right: -14rem;
+
+      ${media.tablet} {
+        top: -46.4rem;
+        right: -51.7rem;
+      }
+
+      ${media.phone} {
+        top: -64.4rem;
+        right: -48rem;
       }
     }
   }
