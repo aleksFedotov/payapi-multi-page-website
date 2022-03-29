@@ -59,7 +59,8 @@ body {
   font-size: var(--font-size-body);
   background-color:var(--color-water-white);
   font-family: 'DM Serif Display', sans-serif;
-  min-height: 100vh; 
+  
+  height: fit-content;
  
 }
 

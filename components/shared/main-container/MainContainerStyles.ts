@@ -7,7 +7,7 @@ export const MainContainer = styled.main`
   max-width: 144rem;
   width: 100%;
   margin: 0 auto;
-  min-height: 100vh;
+
   height: fit-content;
   background-color: #edf3f8;
   display: flex;

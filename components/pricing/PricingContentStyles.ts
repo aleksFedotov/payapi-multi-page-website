@@ -6,31 +6,38 @@ interface PricingProps {
   marked: boolean;
 }
 
-export const PricingHeading = styled.h1`
-  max-width: 110rem;
-  width: 100%;
-  margin-top: 8.2rem;
-  margin-bottom: 7.2rem;
-  font-size: var(--font-size-heading-xl);
-  color: var(--color-san-luan-blue);
-  ${media.tablet} {
-    text-align: center;
-  }
-`;
-
 export const PricingWrapper = styled.div`
   max-width: 110rem;
   width: 100%;
   display: flex;
   gap: 3rem;
+
+  ${media.phone} {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const Price = styled.div`
   max-width: 35rem;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  button {
+    align-self: center;
+  }
+
+  span {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(54, 83, 107, 0.25);
+    margin-bottom: 2.4rem;
+  }
 `;
 
 export const PriceHeader = styled.div`
+  border-bottom: 1px solid rgba(54, 83, 107, 0.25);
   h2 {
     font-size: var(--font-size-heading-m);
     color: var(--color-charm-pink);
@@ -48,8 +55,22 @@ export const PriceHeader = styled.div`
   }
 
   ${media.tablet} {
-    p {
+    p,
+    h2,
+    h3 {
       text-align: center;
+    }
+    h2 {
+      font-size: var(--font-size-heading-xs);
+    }
+    h3 {
+      font-size: var(--font-size-heading-l);
+    }
+  }
+
+  ${media.phone} {
+    h3 {
+      font-size: var(--line-height-header-l);
     }
   }
 `;
@@ -57,9 +78,9 @@ export const PriceHeader = styled.div`
 export const PricingList = styled.ul`
   list-style: none;
   padding: 3rem 0;
-  border-top: 1px solid rgba(54, 83, 107, 0.25);
-  border-bottom: 1px solid rgba(54, 83, 107, 0.25);
-  margin-bottom: 2.4rem;
+  ${media.tablet} {
+    align-self: center;
+  }
 `;
 
 export const ListItem = styled.li<PricingProps>`
@@ -72,6 +93,7 @@ export const ListItem = styled.li<PricingProps>`
   }
 
   p {
+    font-size: 1.6rem;
     color: ${({ marked }) =>
       marked
         ? 'var(--color-light-san-juan-blue)'

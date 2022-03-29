@@ -4,7 +4,7 @@ import { Section, ContentWrapper, ComapaniesGrid } from './WorkSectionStyles';
 
 import { TextWrapper } from '../../shared/text-wrapper/TextWrapperStyles';
 
-import { Button } from '../../shared/buttons/ButtonsStyles';
+import { Button } from '../../shared/UI/ButtonsStyles';
 
 import Tesla from '../../../public/assets/shared/desktop/tesla.svg';
 import Microcoft from '../../../public/assets/shared/desktop/microsoft.svg';

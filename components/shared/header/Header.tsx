@@ -7,7 +7,7 @@ import {
   NavigationList,
   NavigationListItem,
 } from './HeaderStyles';
-import { Button } from '../buttons/ButtonsStyles';
+import { Button } from '../UI/ButtonsStyles';
 import Logo from '../../../public/assets/shared/desktop/logo.svg';
 import MenuIcon from '../../../public/assets/shared/mobile/menu.svg';
 import CloseIcon from '../../../public/assets/shared/mobile/close.svg';

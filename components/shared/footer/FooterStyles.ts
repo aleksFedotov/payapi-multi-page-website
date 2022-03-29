@@ -3,9 +3,8 @@ import styled from 'styled-components';
 import { media } from '../../../styles/GlobalStyles';
 
 export const FooterWrapper = styled.footer`
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+  position: relative;
+  width: calc(100% + 4.8rem);
   height: 10rem;
   display: flex;
   justify-content: center;
@@ -17,9 +16,17 @@ export const FooterWrapper = styled.footer`
   &::before {
     content: url('/assets/shared/desktop/bg-pattern-circle.svg');
     position: absolute;
-    z-index: 1;
+    z-index: 0;
     top: -13.6rem;
     right: -39rem;
+    width: 78rem;
+    height: 78rem;
+
+    ${media.phone} {
+      left: 50%;
+      transform: translateX(-50%);
+      top: 20.2rem;
+    }
   }
 
   svg {

@@ -3,7 +3,7 @@ import React from 'react';
 import { PricingWrapper, Price, PriceHeader } from './PricingContentStyles';
 import FeaturesList from './FeaturesList';
 
-import { Button } from '../shared/buttons/ButtonsStyles';
+import { Button } from '../shared/UI/ButtonsStyles';
 
 const PricingContent = () => {
   return (
@@ -18,6 +18,7 @@ const PricingContent = () => {
           <h3>$0.00</h3>
         </PriceHeader>
         <FeaturesList numberOfFeatures={3} />
+        <span />
         <Button className="secondary-dark">Request Access</Button>
       </Price>
       <Price>
@@ -30,6 +31,7 @@ const PricingContent = () => {
           <h3>$249.00</h3>
         </PriceHeader>
         <FeaturesList numberOfFeatures={5} />
+        <span />
         <Button className="secondary-dark">Request Access</Button>
       </Price>
       <Price>
@@ -42,6 +44,7 @@ const PricingContent = () => {
           <h3>$499.00</h3>
         </PriceHeader>
         <FeaturesList numberOfFeatures={7} />
+        <span />
         <Button className="secondary-dark">Request Access</Button>
       </Price>
     </PricingWrapper>

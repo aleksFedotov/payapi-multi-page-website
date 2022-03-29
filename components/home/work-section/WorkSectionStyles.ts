@@ -21,7 +21,7 @@ export const Section = styled.section`
     ${media.tablet} {
       left: 50%;
       top: -54.8rem;
-      transform: translate(-50%);
+      transform: translateX(-50%);
     }
   }
   ${media.tablet} {

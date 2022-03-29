@@ -10,7 +10,7 @@ import {
 
 import { MobileMenuWrapper } from './MobileMenuStyles';
 
-import { Button } from '../buttons/ButtonsStyles';
+import { Button } from '../UI/ButtonsStyles';
 
 const MobileMenu: React.FC<{ toggleMenu: () => void }> = ({ toggleMenu }) => {
   const linkHanlder = () => {
@@ -21,13 +21,13 @@ const MobileMenu: React.FC<{ toggleMenu: () => void }> = ({ toggleMenu }) => {
     <MobileMenuWrapper>
       <Navigation>
         <NavigationList>
-          <NavigationListItem color="ligth">
+          <NavigationListItem color="ligth" onClick={linkHanlder}>
             <Link href={'/pricing'}>Pricing</Link>
           </NavigationListItem>
-          <NavigationListItem color="ligth">
+          <NavigationListItem color="ligth" onClick={linkHanlder}>
             <Link href={'/about'}>About</Link>
           </NavigationListItem>
-          <NavigationListItem color="ligth">
+          <NavigationListItem color="ligth" onClick={linkHanlder}>
             <Link href={'/contact'}>Contact</Link>
           </NavigationListItem>
         </NavigationList>

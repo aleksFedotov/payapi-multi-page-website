@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 
-import { Button } from '../buttons/ButtonsStyles';
+import { Button } from '../UI/ButtonsStyles';
 import { DemoEmailWrapper, InputWrapper } from './DemoEmailInputStyles';
 import { ErrorMessage } from '../erroe-message/ErrorMessageStyles';
 
