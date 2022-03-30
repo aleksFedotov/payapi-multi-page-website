@@ -45,37 +45,3 @@ export const ContentWrapper = styled.div`
     gap: 6rem;
   }
 `;
-
-export const ComapaniesGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  height: fit-content;
-  row-gap: 4rem;
-  column-gap: 6rem;
-  align-items: center;
-
-  svg {
-    justify-self: center;
-
-    path {
-      fill: var(--color-water-white);
-    }
-  }
-
-  @media (max-width: 1150px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  ${media.tablet} {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  ${media.phone} {
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 4rem;
-
-    svg {
-      transform: scale(0.82);
-    }
-  }
-`;

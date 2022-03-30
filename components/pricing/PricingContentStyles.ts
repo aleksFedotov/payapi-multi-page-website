@@ -23,9 +23,8 @@ export const Price = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-
   button {
-    align-self: center;
+    width: fit-content;
   }
 
   span {
@@ -33,6 +32,12 @@ export const Price = styled.div`
     height: 1px;
     background-color: rgba(54, 83, 107, 0.25);
     margin-bottom: 2.4rem;
+  }
+
+  ${media.tablet} {
+    button {
+      align-self: center;
+    }
   }
 `;
 

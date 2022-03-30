@@ -39,7 +39,9 @@ export const MainContainer = styled.main`
     }
   }
 
-  &.pricing {
+  &.pricing,
+  &.contact,
+  &.about {
     &::before {
       content: '';
       background-image: url('/assets/shared/desktop/bg-pattern-circle.svg');
@@ -61,6 +63,14 @@ export const MainContainer = styled.main`
         top: -64.4rem;
         right: -48rem;
       }
+    }
+  }
+
+  &.about,
+  &.contact {
+    h1 {
+      max-width: 73rem;
+      width: 100%;
     }
   }
 `;

@@ -1,17 +1,9 @@
 import React from 'react';
 
-import { Section, ContentWrapper, ComapaniesGrid } from './WorkSectionStyles';
-
+import { Section, ContentWrapper } from './WorkSectionStyles';
 import { TextWrapper } from '../../shared/text-wrapper/TextWrapperStyles';
-
 import { Button } from '../../shared/UI/ButtonsStyles';
-
-import Tesla from '../../../public/assets/shared/desktop/tesla.svg';
-import Microcoft from '../../../public/assets/shared/desktop/microsoft.svg';
-import HP from '../../../public/assets/shared/desktop/hewlett-packard.svg';
-import Oracle from '../../../public/assets/shared/desktop/oracle.svg';
-import Google from '../../../public/assets/shared/desktop/google.svg';
-import NVidia from '../../../public/assets/shared/desktop/nvidia.svg';
+import Copmanies from '../../shared/copmanies/Copmanies';
 
 const WorkSection: React.FC = () => {
   return (
@@ -27,14 +19,7 @@ const WorkSection: React.FC = () => {
           </p>
           <Button className="secondary-ligth">About Us</Button>
         </TextWrapper>
-        <ComapaniesGrid>
-          <Tesla />
-          <Microcoft />
-          <HP />
-          <Oracle />
-          <Google />
-          <NVidia />
-        </ComapaniesGrid>
+        <Copmanies color="light" />
       </ContentWrapper>
     </Section>
   );
