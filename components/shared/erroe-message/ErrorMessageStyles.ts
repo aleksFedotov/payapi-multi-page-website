@@ -6,6 +6,7 @@ interface ErrorProps {
 }
 
 export const ErrorMessage = styled.p<ErrorProps>`
+  font-size: 1.1rem;
   position: absolute;
   bottom: ${({ bottom }) => bottom};
   left: ${({ left }) => left};

@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-export const MobileMenuWrapper = styled.div`
+import { motion } from 'framer-motion';
+
+export const MobileMenuWrapper = styled(motion.div)`
   position: relative;
   display: flex;
   flex-direction: column;

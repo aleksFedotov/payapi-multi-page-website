@@ -17,8 +17,20 @@ const MobileMenu: React.FC<{ toggleMenu: () => void }> = ({ toggleMenu }) => {
     toggleMenu();
     document.body.style.overflow = 'visible';
   };
+
+  const MobileMenuVariants = {
+    initial: { x: 300 },
+    animate: { x: 0, transition: { duration: 0.75 } },
+    exit: { x: 300, transition: { duration: 0.75 } },
+  };
+
   return (
-    <MobileMenuWrapper>
+    <MobileMenuWrapper
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      variants={MobileMenuVariants}
+    >
       <Navigation>
         <NavigationList>
           <NavigationListItem color="ligth" onClick={linkHanlder}>

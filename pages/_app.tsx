@@ -11,6 +11,8 @@ import Header from '../components/shared/header/Header';
 import Footer from '../components/shared/footer/Footer';
 import MobileMenu from '../components/shared/mobile-menu/MobileMenu';
 
+import { AnimatePresence } from 'framer-motion';
+
 function MyApp({ Component, pageProps }: AppProps) {
   const [isMenuOpened, seIsMenuOpened] = useState<boolean>(false);
   const router = useRouter();
@@ -25,7 +27,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Header toggleMenu={menuToggleHandler} isOpened={isMenuOpened} />
         <Component {...pageProps} />
         <Footer />
-        {isMenuOpened && <MobileMenu toggleMenu={menuToggleHandler} />}
+        <AnimatePresence>
+          {isMenuOpened && (
+            <MobileMenu toggleMenu={menuToggleHandler} key={'mobile'} />
+          )}
+        </AnimatePresence>
       </MainContainer>
     </>
   );
